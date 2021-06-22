@@ -29,6 +29,9 @@ boxplot.stats(DadosG$new_cases, coef = 2)$out
 
 ##
 
+DadosG$new_cases <- impute(DadosG$new_cases, fun = mean)
+
 (DadosG$new_cases <- round(runif(10, 1, 50)))
 
 (DadosG$new_cases[DadosGNASeed] <- NA)
+
